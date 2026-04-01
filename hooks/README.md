@@ -1,0 +1,1 @@
+This folder contains examples and practice code for React Hooks such as useState, useEffect, useRef, and custom hooks. It focuses on understanding state management, side effects, and reusable logic in functional components through simple, hands-on implementations.
