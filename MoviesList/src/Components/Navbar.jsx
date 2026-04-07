@@ -1,14 +1,15 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import bell from "../assets/bell.png";
+import message from "../assets/message.png";
+import profileImage from "../assets/profile.png";
 import "./Navbar.css";
-import profileImage from "../assets/profile.png"
-import message from "../assets/message.png"
-import bell from "../assets/bell.png"
 
-export default function Navbar(){
-    return(
+export default function Navbar() {
+    return (
         <nav className="navbar">
-            <div className="logo"></div>
+            <div className="logo">
+                <img src={logo} alt="logo" />
+            </div>
 
             <ul className="nav_link">
                 <li><Link to="/">Home</Link></li>
@@ -18,9 +19,9 @@ export default function Navbar(){
             </ul>
 
             <div className="nav-icons">
-                <img src={message} alt="message_icon" className="icon"/>
-                <img src={bell} alt="bell_icon" className="icon"/>
-                <img src={profileImage} alt="profile_photo" className="profile_photo"/>
+                <img src={message} alt="message_icon" className="icon" />
+                <img src={bell} alt="bell_icon" className="icon" />
+                <img src={profileImage} alt="profile_photo" className="profile_photo" />
             </div>
         </nav>
     );
