@@ -1,0 +1,41 @@
+{
+  "todoList": [
+    {
+      "task": "",
+      "id": "yjfoe4o"
+    },
+    {
+      "task": "pineapple",
+      "id": "X6cJwKM"
+    },
+    {
+      "task": "Dragon fruit",
+      "id": "5HTkUPu"
+    },
+    {
+      "task": "Strawberry",
+      "id": "_S3RBVV"
+    },
+    {
+      "task": "orange",
+      "id": "YtOLIP9"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

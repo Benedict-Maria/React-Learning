@@ -1,0 +1,32 @@
+{
+    "courses" :[
+        {
+            "id" : 1,
+            "name" : "Python",
+            "duration" : "3 months",
+            "image" : "http://localhost:3000/assets/python.jpg",
+            "fee" : "$300"
+        },
+        {
+            "id" : 2,
+            "name" : "JavaScript",
+            "duration" : "3 months",
+            "image" : "http://localhost:3000/assets/javascript.png",
+            "fee" : "$500"
+        },
+        {
+            "id" : 3,
+            "name" : "FastAPI",
+            "duration" : "4 months",
+            "image" : "http://localhost:3000/assets/fastapi.png",
+            "fee" : "$600"
+        },
+        {
+            "id" : 4,
+            "name" : "SQL",
+            "duration" : "3 months",
+            "image" : "http://localhost:3000/assets/sql.png",
+            "fee" : "$400"
+        }
+    ]
+}
