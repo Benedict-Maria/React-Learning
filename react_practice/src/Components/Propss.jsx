@@ -1,7 +1,7 @@
 import React from 'react'
 
 // export default function Propss(props) {     props.name   props.price   --> one way data binding from App to Component
-// export default function Propss({name, price})  // destructuring props
+// export default function Propss({name, price})  --> destructuring props
 //     const handleProps = () => {
 //         alert("Movie Booked");
 //     }

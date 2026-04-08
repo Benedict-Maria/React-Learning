@@ -8,9 +8,7 @@ import Contact from "./Pages/Contact";
 export default function App(){
   return(
     <BrowserRouter>
-        <nav>
-          <Navbar />
-        </nav>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/moviesList" element={<MoviesList/>}/>

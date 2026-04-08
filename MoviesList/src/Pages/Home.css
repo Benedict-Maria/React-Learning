@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #0f0f0f;
+}
+.home {
+  color: white;
+}
+.hero {
+  width: 100%;
+  height: 90vh;
+  background-image: url("https://wallpaperaccess.com/full/329583.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.3)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+}
+.title {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.description {
+  max-width: 500px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.play-btn {
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+.play-btn:hover {
+  background: rgba(251, 3, 3, 0.3);
+  color: white;
+  font-weight: bold;
+}
+.info-btn {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+.info-btn:hover {
+  background: rgba(251, 3, 3, 0.3);
+  color: white;
+}
+.content {
+  padding: 20px 40px;
+}
+.movie-row {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+  justify-content: center;
+}
+.movie-card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 220px;
+  transition: 0.3s;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.movie-card:hover {
+  transform: scale(1.05);
+}
+.movie-card h3 {
+  margin: 10px 0 5px;
+}
+.movie-card p {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+.movie-card button {
+  padding: 8px 15px;
+  background: #fa1f1f;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.movie-card button:hover {
+  background: #cc0000;
+}
