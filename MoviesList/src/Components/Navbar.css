@@ -48,7 +48,7 @@ body {
 .nav-icons {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 .icon {
   font-size: 20px;
