@@ -1,100 +1,55 @@
-.movies-page {
-  padding: 20px;
-  color: white;
-  text-align: center;
-  background-color: #121212;
-}
-
-.movies-grid {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-/* Card: Fixed width, flexible height */
-.movie-card {
-  position: relative;
-  width: 300px; /* Narrower width as requested */
-  border-radius: 15px;
-  overflow: hidden;
-  background-color: #000;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-}
-
-/* Image Fix: height auto prevents the top from being cut */
-.movie-img {
-  width: 100%;
-  height: auto; 
-  display: block;
-  object-fit: contain; /* Ensures the full image fits the width */
-}
-
-/* Overlay: Positioned at bottom with a readable gradient */
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 30px 15px 15px;
-  text-align: left;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8) 70%,
-    transparent 100%
-  );
-}
-
-.movie-title {
-  color: #ffffff;
+body {
+  background-color: #000; /* full black background */
+  color: #fff;
   margin: 0;
-  font-size: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.movie-type {
-  color: #ffffff !important; /* Force White */
-  font-size: 13px;
-  margin: 2px 0 8px 0;
-  opacity: 0.9;
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
 }
 
-/* Description Logic */
-.movie-desc {
-  color: #ffffff !important; /* Force White */
-  font-size: 12px;
-  line-height: 1.4;
-  margin-bottom: 5px;
+.movie-card {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* 3-line limit with dots */
-.clamped {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.movie-card:hover {
+  transform: scale(1.03);
 }
 
-/* Full text state */
-.expanded {
-  display: block;
-  overflow: visible;
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.see-more {
-  color: #ff0000; /* Red color */
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-block;
+.movie-card h2 {
+  font-size: 18px;
   margin-bottom: 8px;
 }
 
+.movie-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.plot {
+  font-size: 13px;
+  color: #ddd;
+}
+
 .rating {
-  color: #ffcc00; /* Yellow rating */
-  font-size: 15px;
+  margin-top: 10px;
   font-weight: bold;
-  margin: 0;
+  color: #fff;
 }

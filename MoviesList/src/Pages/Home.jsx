@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from "react";
-import zootopia from "../assets/zootopia.jpg";
-import encanto from "../assets/encanto.jpeg";
+import { useEffect, useState } from "react";
 import elemental from "../assets/elemental.jpg";
+import encanto from "../assets/encanto.jpeg";
 import ratatouille from "../assets/ratatouille.jpeg";
+import zootopia from "../assets/zootopia.jpg";
+import train_dragon from "../assets/dragon.jpg";
+import cinderella from "../assets/cinderella.jfif";
 import hero1 from "../assets/hero1.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.png";
 import hero4 from "../assets/hero4.jpg";
 import hero5 from "../assets/hero5.jpg";
+
 import "./Home.css";
 
 const movies = [
@@ -15,6 +18,8 @@ const movies = [
     { title: "Encanto", img: encanto, rating: 8.5 },
     { title: "Elemental", img: elemental, rating: 9.3 },
     { title: "Ratatouille", img: ratatouille, rating: 9.0 },
+    { title: "How To Train Your Dragon", img: train_dragon, rating: 8.2 },
+    { title: "Cinderella", img: cinderella, rating: 8.0 },
 ];
 
 const heroSlides = [
@@ -33,7 +38,7 @@ export default function Home() {
             setCurrentIndex((prev) => (prev + 1) % heroSlides.length);
         }, 10000);
         return () => clearInterval(interval);
-    }, []);
+    }, [heroSlides.length]);
 
     const nextSlide = () => {
         setCurrentIndex((prev) => (prev + 1) % heroSlides.length);

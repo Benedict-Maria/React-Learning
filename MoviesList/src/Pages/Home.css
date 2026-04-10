@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: transparent;
+  background:rgba(0, 0, 0, 0.2);
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -38,7 +38,7 @@ body {
 
 .description {
   max-width: 500px;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 20px;
   line-height: 1.5;
 }
@@ -69,12 +69,13 @@ body {
 }
 
 .info-btn {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
+  background: rgba(133, 121, 121, 0.86);
+  color: black;
 }
 
 .info-btn:hover {
   background: rgba(251, 3, 3, 0.5);
+  color: white;
 }
 
 .content {
