@@ -18,36 +18,11 @@ const movies = [
 ];
 
 const heroSlides = [
-    {
-        img: hero1,
-        title: "Avengers: Endgame",
-        description:
-            "The Avengers assemble once more to reverse Thanos' actions and restore balance.",
-    },
-    {
-        img: hero2,
-        title: "Beauty and the Beast",
-        description:
-            "A magical love story between a young woman and a cursed prince.",
-    },
-    {
-        img: hero3,
-        title: "Spider-Man",
-        description:
-            "A young hero balances life and responsibility while protecting the city.",
-    },
-    {
-        img: hero4,
-        title: "The Lion King",
-        description:
-            "A lion cub must embrace his destiny and become king.",
-    },
-    {
-        img: hero5,
-        title: "The Conjuring",
-        description:
-            "Paranormal investigators help a family terrorized by dark forces.",
-    },
+    { img: hero1, title: "Avengers: Endgame", description: "The Avengers assemble once more to reverse Thanos' actions and restore balance." },
+    { img: hero2, title: "Beauty and the Beast", description: "A magical love story between a young woman and a cursed prince." },
+    { img: hero3, title: "Spider-Man", description: "A young hero balances life and responsibility while protecting the city." },
+    { img: hero4, title: "The Lion King", description: "A lion cub must embrace his destiny and become king." },
+    { img: hero5, title: "The Conjuring", description: "Paranormal investigators help a family terrorized by dark forces." },
 ];
 
 export default function Home() {
@@ -57,9 +32,22 @@ export default function Home() {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % heroSlides.length);
         }, 10000);
-
         return () => clearInterval(interval);
     }, []);
+
+    const nextSlide = () => {
+        setCurrentIndex((prev) => (prev + 1) % heroSlides.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prev) =>
+            prev === 0 ? heroSlides.length - 1 : prev - 1
+        );
+    };
+
+    const goToSlide = (index) => {
+        setCurrentIndex(index);
+    };
 
     return (
         <div className="home">
@@ -80,7 +68,21 @@ export default function Home() {
                         <button className="info-btn">ℹ More Info</button>
                     </div>
                 </div>
+
+                <button className="arrow left" onClick={prevSlide}>❮</button>
+                <button className="arrow right" onClick={nextSlide}>❯</button>
+
+                <div className="dots">
+                    {heroSlides.map((_, index) => (
+                        <span
+                            key={index}
+                            className={`dot ${index === currentIndex ? "active" : ""}`}
+                            onClick={() => goToSlide(index)}
+                        ></span>
+                    ))}
+                </div>
             </div>
+
             <div className="content">
                 <h2>Trending Movies</h2>
 
